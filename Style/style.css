@@ -1,6 +1,11 @@
-body {
-    overflow-y: scroll;
+html {
+    min-height: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    overflow: visible;
     min-height: 100vh;
 }
 
@@ -121,6 +126,30 @@ img {
 }
 
 @media (max-width:767px) {
+    #home {
+        height: auto !important;
+        touch-action: pan-y;
+    }
+
+    #home .carousel-inner,
+    #home .carousel-item {
+        height: auto !important;
+    }
+
+    #home .carousel-inner {
+        touch-action: pan-y;
+    }
+
+    #home .carousel-item.top {
+        margin-top: 0;
+    }
+
+    #home .carousel-caption {
+        bottom: 1rem;
+        display: block !important;
+        margin-bottom: 0;
+    }
+
     .navbar .search {
         margin-top: 0.75rem;
         width: 100%;
